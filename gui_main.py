@@ -85,4 +85,9 @@ symptoms_entry = ttk.Combobox(pad2_lable, values=["Fever", "Cough", "Loss of Sme
 symptoms_entry.grid(row=9, column=2)
 symptoms_label = tkinter.Label(pad2_lable, text="Symptoms in the past 7 Days")
 symptoms_label.grid (row=8, column=2)
+# Contact with Symptoms Entry and Label
+contact_symp_entry = ttk.Combobox(pad2_lable, values=["Yes", "No"])
+contact_symp_entry.grid(row=11, column=0)
+contact_symp_label = tkinter.Label(pad2_lable, text="Do you had contact with \n someone with the Symptoms?")
+contact_symp_label.grid (row=10, column=0)
 gui.mainloop()
