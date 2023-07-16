@@ -4,7 +4,7 @@ import tkinter
 from tkinter import ttk
 # Create a gui window
 gui = tkinter.Tk()
-gui.title ("Covid-19 Tracing")
+gui.title ("Covid-19 Contact Tracing")
 # Add window size
 gui.geometry ("600x400")
 # Create a pack widgets
@@ -65,4 +65,9 @@ email_label = tkinter.Label(pad1_lable, text="E-mail Address")
 email_label.grid (row=5, column=2)
 
 # Create a pack widgets
+pad2 = tkinter.Frame(gui)
+pad2.pack()
+pad2_lable = tkinter.LabelFrame(pad1, text="Vaccination Details")
+pad2_lable.grid (row=7, column=2)
+
 gui.mainloop()
