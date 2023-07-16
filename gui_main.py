@@ -11,7 +11,7 @@ gui.geometry ("600x400")
 pad1 = tkinter.Frame(gui)
 pad1.pack()
 pad1_lable = tkinter.LabelFrame(pad1, text="Personal Information")
-pad1_lable.grid (row=0, column=2)
+pad1_lable.grid (row=0, column=2, padx=15, pady=15)
 # Add Entries and Labels For pad1
 # First Name Entry and Label
 fname_entry = tkinter.Entry(pad1_lable)
@@ -53,6 +53,11 @@ city_entry = tkinter.Entry(pad1_lable)
 city_entry.grid(row=4, column=3)
 city_label = tkinter.Label(pad1_lable, text="Municipality")
 city_label.grid (row=3, column=3)
+# Age Entry and Label
+age_entry = tkinter.Scale(pad1_lable, from_=1, to=100, orient="horizontal")
+age_entry.grid(row=6, column=0)
+age_label = tkinter.Label(pad1_lable, text="Age")
+age_label.grid (row=5, column=0)
 # Contact No. Entry and Label
 contactnum_entry = tkinter.Entry(pad1_lable)
 contactnum_entry.grid(row=6, column=1)
