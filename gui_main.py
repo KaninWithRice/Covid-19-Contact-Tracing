@@ -54,4 +54,9 @@ city_entry.grid(row=4, column=3)
 city_label = tkinter.Label(pad1_lable, text="Municipality")
 city_label.grid (row=3, column=3)
 
+contactnum_entry = tkinter.Entry(pad1_lable)
+contactnum_entry.grid(row=6, column=1)
+contactnum_label = tkinter.Label(pad1_lable, text="Contact No.")
+contactnum_label.grid (row=5, column=1)
+
 gui.mainloop()
