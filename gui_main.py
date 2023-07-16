@@ -44,4 +44,9 @@ street_entry.grid(row=4, column=1)
 street_label = tkinter.Label(pad1_lable, text="Street")
 street_label.grid (row=3, column=1)
 
+brgy_entry = tkinter.Entry(pad1_lable)
+brgy_entry.grid(row=4, column=2)
+brgy_label = tkinter.Label(pad1_lable, text="Barangay/Village")
+brgy_label.grid (row=3, column=2)
+
 gui.mainloop()
