@@ -93,6 +93,11 @@ contact_symp_label.grid (row=10, column=0)
 # Tested for Covid Entry and Label
 tested_entry = ttk.Combobox(pad2_lable, values=["Yes-Positive", "Yes-Negative", "No"])
 tested_entry.grid(row=11, column=1)
-tested_label = tkinter.Label(pad2_lable, text="Have you been tested for \n Covid-19 for the past 10 days")
+tested_label = tkinter.Label(pad2_lable, text="Have you been tested for \n Covid-19 for the past 10 days?")
 tested_label.grid (row=10, column=1)
+# Travel Concern Entry and Label
+travel_entry = ttk.Combobox(pad2_lable, values=["Yes", "No"])
+travel_entry.grid(row=11, column=2)
+travel_label = tkinter.Label(pad2_lable, text="Have you Traveled International \n  for the past 14 days?")
+travel_label.grid (row=10, column=2)
 gui.mainloop()
