@@ -59,4 +59,9 @@ contactnum_entry.grid(row=6, column=1)
 contactnum_label = tkinter.Label(pad1_lable, text="Contact No.")
 contactnum_label.grid (row=5, column=1)
 
+email_entry = tkinter.Entry(pad1_lable)
+email_entry.grid(row=6, column=2)
+email_label = tkinter.Label(pad1_lable, text="E-mail Address")
+email_label.grid (row=5, column=2)
+
 gui.mainloop()
