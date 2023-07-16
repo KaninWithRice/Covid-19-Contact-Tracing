@@ -70,9 +70,15 @@ pad2.pack()
 pad2_lable = tkinter.LabelFrame(pad2, text="Vaccination Details")
 pad2_lable.grid (row=7, column=2)
 # Add Entries and Labels For pad2
+# Vaccine Status Entry and Label
 vstatus_entry = ttk.Combobox(pad2_lable, values=["None", "1st Dose", "2nd Dose", "1st Booster", "2nd Booster"])
 vstatus_entry.grid(row=9, column=0)
 vstatus_label = tkinter.Label(pad2_lable, text="Vaccination Status")
 vstatus_label.grid (row=8, column=0)
+# Vaccine Type Entry and Label
+vtype_entry = ttk.Combobox(pad2_lable, values=["None", "Pfizer", "Johnson & Johnson", "AstraZeneca", "Moderna", "Sinovac", "Sputnik"])
+vtype_entry.grid(row=9, column=1)
+vtype_label = tkinter.Label(pad2_lable, text="Type of Vaccine")
+vtype_label.grid (row=8, column=1)
 
 gui.mainloop()
