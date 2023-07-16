@@ -68,6 +68,12 @@ email_entry = tkinter.Entry(pad1_lable)
 email_entry.grid(row=6, column=2)
 email_label = tkinter.Label(pad1_lable, text="E-mail Address")
 email_label.grid (row=5, column=2)
+# Gender Entry and Label
+gender_entry = ttk.Combobox(pad1_lable, values=["Male", "Female", "Transgender Male", "Transgender Female", "Non-Binary", "Bigender", "Genderqueer", "Other", "Prefer not to say"])
+gender_entry.grid(row=6, column=3)
+gender_label = tkinter.Label(pad1_lable, text="Gender")
+gender_label.grid (row=5, column=3)
+
 
 # Create a pack widgets
 pad2 = tkinter.Frame(gui)
