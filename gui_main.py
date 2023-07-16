@@ -49,4 +49,9 @@ brgy_entry.grid(row=4, column=2)
 brgy_label = tkinter.Label(pad1_lable, text="Barangay/Village")
 brgy_label.grid (row=3, column=2)
 
+city_entry = tkinter.Entry(pad1_lable)
+city_entry.grid(row=4, column=3)
+city_label = tkinter.Label(pad1_lable, text="Municipality")
+city_label.grid (row=3, column=3)
+
 gui.mainloop()
