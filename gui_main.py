@@ -34,5 +34,10 @@ suffix_entry.grid(row=1, column=3)
 suffix_label = tkinter.Label(pad1_lable, text="Suffix Name")
 suffix_label.grid (row=0, column=3)
 
+housenum_entry = tkinter.Entry(pad1_lable)
+housenum_entry.grid(row=4, column=0)
+housenum_label = tkinter.Label(pad1_lable, text="House Number")
+housenum_label.grid (row=3, column=0)
+
 
 gui.mainloop()
