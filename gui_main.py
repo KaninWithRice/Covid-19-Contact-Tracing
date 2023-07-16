@@ -80,5 +80,9 @@ vtype_entry = ttk.Combobox(pad2_lable, values=["None", "Pfizer", "Johnson & John
 vtype_entry.grid(row=9, column=1)
 vtype_label = tkinter.Label(pad2_lable, text="Type of Vaccine")
 vtype_label.grid (row=8, column=1)
-
+# Symptoms Entry and Label
+symptoms_entry = ttk.Combobox(pad2_lable, values=["Fever", "Cough", "Loss of Smell", "Loss of Taste", "Body Pain", "None of the above"])
+symptoms_entry.grid(row=9, column=2)
+symptoms_label = tkinter.Label(pad2_lable, text="Symptoms in the past 7 Days")
+symptoms_label.grid (row=8, column=2)
 gui.mainloop()
