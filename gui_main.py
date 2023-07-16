@@ -39,5 +39,9 @@ housenum_entry.grid(row=4, column=0)
 housenum_label = tkinter.Label(pad1_lable, text="House Number")
 housenum_label.grid (row=3, column=0)
 
+street_entry = tkinter.Entry(pad1_lable)
+street_entry.grid(row=4, column=1)
+street_label = tkinter.Label(pad1_lable, text="Street")
+street_label.grid (row=3, column=1)
 
 gui.mainloop()
