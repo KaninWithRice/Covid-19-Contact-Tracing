@@ -67,7 +67,12 @@ email_label.grid (row=5, column=2)
 # Create a pack widgets
 pad2 = tkinter.Frame(gui)
 pad2.pack()
-pad2_lable = tkinter.LabelFrame(pad1, text="Vaccination Details")
+pad2_lable = tkinter.LabelFrame(pad2, text="Vaccination Details")
 pad2_lable.grid (row=7, column=2)
+# Add Entries and Labels For pad2
+vstatus_entry = ttk.Combobox(pad2_lable, values=["None", "1st Dose", "2nd Dose", "1st Booster", "2nd Booster"])
+vstatus_entry.grid(row=9, column=0)
+vstatus_label = tkinter.Label(pad2_lable, text="Vaccination Status")
+vstatus_label.grid (row=8, column=0)
 
 gui.mainloop()
