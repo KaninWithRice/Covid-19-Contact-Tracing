@@ -111,4 +111,7 @@ travel_entry = ttk.Combobox(pad2_lable, values=["Yes", "No"])
 travel_entry.grid(row=11, column=2)
 travel_label = tkinter.Label(pad2_lable, text="Have you Traveled International \n  for the past 14 days?")
 travel_label.grid (row=10, column=2)
+# Add a button
+reg_button = tkinter.Button(pad2, text="Register")
+reg_button.grid(width=2, length=2, row=13, column=2, padx=20, pady=20)
 gui.mainloop()
