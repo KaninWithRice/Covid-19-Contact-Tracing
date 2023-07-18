@@ -135,6 +135,7 @@ class register_info:
         city = self.city_entry.get()
         age = self.age_entry.get()
         contactnum = self.contactnum_entry.get()
+        email = self.email_entry.get()
         gender = self.gender_entry.get()
         vstatus = self.vstatus_entry.get()
         vtype = self.vtype_entry.get()
@@ -143,12 +144,12 @@ class register_info:
         tested = self.tested_entry.get()
         travel = self.travel_entry.get()
         # Add Error Input
-        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
+        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not email or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
             messagebox.showerror("ERROR << PLEASE FILL UP ALL INFORMATION >> ERROR")    
             return
         # Create Data Label and Entry Variable
         label = ["First Name", "Middle Name", "Last Name", "Suffix", "House Number", "Street", "Baranggay/Village", "City", "Age", "Contact No.", "Gender", "Vaccine Status", "Type of Vaccine", "Question 1", "Question 2", "Question 3", "Question 4"]
-        regd_data = [first_name, middle_name, last_name, suffix, housenum, street, bgry, city, age, contactnum, gender, vstatus, vtype, symptoms, contact_symp, tested, travel]
+        regd_data = [first_name, middle_name, last_name, suffix, housenum, street, bgry, city, age, contactnum, email, gender, vstatus, vtype, symptoms, contact_symp, tested, travel]
         # Check if a csv file exists
         file_checker = False
         try:

@@ -136,9 +136,10 @@ class search_info:
         city = self.city_entry.get()
         age = self.age_entry.get()
         contactnum = self.contactnum_entry.get()
+        email = self.email_entry.get()
         gender = self.gender_entry.get()
         # Check if at least one field is filled
-        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender:
+        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not email or not gender:
             messagebox.showerror("ERROR << PLEASE ENTER ATLEAST ONE INFORMATION >> ERROR")    # Add Error Input
             return
         
@@ -172,8 +173,15 @@ class search_info:
                     match = False
                 if contactnum and row[9] != contactnum:
                     match = False
-                if gender and row[10] != gender:
+                if email and row[10] != email:
+                    match = False  
+                if gender and row[11] != gender:
                     match = False                  
                 if match:
                     data_found.append(row)
-# Show result
+        # Show result
+        if data_found:
+            results = "\n".join([f"\n Name: {entry[0]} {entry[1]} {entry[3]} {entry[3]} \n Age: {entry[8]} \n Gender: {entry[11]} \n Address: {entry[4]} {entry[5]} {entry[6]} {entry[7]}, Email: {entry[2]}" for entry in data_found])
+            messagebox.showinfo("Search Results: ", f"FOUND {len(data_found)} ENTRIES MATCH WITH THE DATA:\n\n{results}")
+        else:
+            messagebox.showinfo("Search Results: ", "NO ENTRIES FOUND")
