@@ -117,7 +117,7 @@ class search_info:
         travel_label = tkinter.Label(self.pad2_lable, text="Have you Traveled International \n  for the past 14 days?")
         travel_label.grid (row=10, column=2)
         # Add a Search Button
-        self.search = tkinter.Button(self.pad2, text="Search")
+        self.search = tkinter.Button(self.pad2, text="Search", command=self.search_engine)
         self.search.grid(row=13, column=2, padx=20, pady=20)
    
     # Mainloop Function
