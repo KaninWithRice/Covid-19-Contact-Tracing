@@ -159,4 +159,8 @@ class register_info:
         except FileNotFoundError:
             pass
         # Write info to the csv file
-    
+        with open("user_data.csv", "a", new_line="") as List:
+            write = csv.writer(List)
+            if not file_checker:
+                write.writerow(label)  # Write label 
+            write.writerow(regd_data)  # Write current entry data
