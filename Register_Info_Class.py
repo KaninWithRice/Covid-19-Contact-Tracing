@@ -150,5 +150,13 @@ class register_info:
         label = ["First Name", "Middle Name", "Last Name", "Suffix", "House Number", "Street", "Baranggay/Village", "City", "Age", "Contact No.", "Gender", "Vaccine Status", "Type of Vaccine", "Question 1", "Question 2", "Question 3", "Question 4"]
         regd_data = [first_name, middle_name, last_name, suffix, housenum, street, bgry, city, age, contactnum, gender, vstatus, vtype, symptoms, contact_symp, tested, travel]
         # Check if a csv file exists
+        file_checker = False
+        try:
+            with open("Data_List.csv", "r") as List:
+                read = csv.reader(List)
+                if any(read):
+                    file_checker = True
+        except FileNotFoundError:
+            pass
         # Write info to the csv file
     
