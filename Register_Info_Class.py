@@ -35,7 +35,7 @@ class register_info:
         lname_label = tkinter.Label(self.pad1_lable, text="Last Name")
         lname_label.grid (row=0, column=2)
         # Suffix Entry and Label
-        self.suffix_entry = ttk.Combobox(self.pad1_lable, values=["", "Jr.", "Sr.", "II", "III", "IV", "V"])
+        self.suffix_entry = ttk.Combobox(self.pad1_lable, values=["N/A", "Jr.", "Sr.", "II", "III", "IV", "V"])
         self.suffix_entry.grid(row=1, column=3)
         suffix_label = tkinter.Label(self.pad1_lable, text="Suffix Name")
         suffix_label.grid (row=0, column=3)
@@ -159,7 +159,7 @@ class register_info:
         except FileNotFoundError:
             pass
         # Write info to the csv file
-        with open("user_data.csv", "a", new_line="") as List:
+        with open("user_data.csv", "a", newline="") as List:
             write = csv.writer(List)
             if not file_checker:
                 write.writerow(label)  # Write label 
