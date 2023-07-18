@@ -147,6 +147,8 @@ class register_info:
             messagebox.showerror("ERROR << PLEASE FILL UP ALL INFORMATION >> ERROR")    
             return
         # Create Data Label and Entry Variable
+        label = ["First Name", "Middle Name", "Last Name", "Suffix", "House Number", "Street", "Baranggay/Village", "City", "Age", "Contact No.", "Gender", "Vaccine Status", "Type of Vaccine", "Question 1", "Question 2", "Question 3", "Question 4"]
+        regd_data = [first_name, middle_name, last_name, suffix, housenum, street, bgry, city, age, contactnum, gender, vstatus, vtype, symptoms, contact_symp, tested, travel]
         # Check if a csv file exists
         # Write info to the csv file
     
