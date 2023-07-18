@@ -2,6 +2,7 @@
 # Import tkinter
 import tkinter
 from tkinter import ttk
+from tkinter import messagebox
 # Import Csv for data recording
 import csv
 # Create a Class
@@ -141,6 +142,11 @@ class register_info:
         contact_symp = self.contact_symp_entry.get()
         tested = self.tested_entry.get()
         travel = self.travel_entry.get()
-
-   
+        # Add Error Input
+        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
+            messagebox.showerror("ERROR << PLEASE FILL UP ALL INFORMATION >> ERROR")    
+            return
+        # Create Data Label and Entry Variable
+        # Check if a csv file exists
+        # Write info to the csv file
     
