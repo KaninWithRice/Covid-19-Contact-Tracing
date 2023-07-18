@@ -143,7 +143,15 @@ class search_info:
         contact_symp = self.contact_symp_entry.get()
         tested = self.tested_entry.get()
         travel = self.travel_entry.get()
-# Check if at least one field is filled
-# Read Data
+        # Check if at least one field is filled
+        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
+            messagebox.showerror("ERROR << PLEASE ENTER ATLEAST ONE INFORMATION >> ERROR")    # Add Error Input
+            return
+        
+        data_found = []     #Added object for data entries found
+        # Read Data
+        with open("user_data.csv", "r") as file:
+            reader = csv.reader(file)
+            header = next(reader)  # Get the header row
 # Allow user to search from any Personal Information
 # Show result
