@@ -21,4 +21,6 @@ class main_menu:
     def open_register(self):
         register_gui = register_info()
         register_gui()
+    def run(self):
+        self.gui.mainloop()
 # Run the Menu Class
