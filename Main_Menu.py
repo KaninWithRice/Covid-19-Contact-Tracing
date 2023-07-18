@@ -19,12 +19,16 @@ class main_menu:
         register_button = tkinter.Button(self.gui, text="Register",command=self.open_register, width=30)
         register_button.pack(pady=10)
         # Add Search Option Button
-        self.search = tkinter.Button(self.gui, text="Search",width=30)
+        self.search = tkinter.Button(self.gui, text="Search",command=self.open_search_engine, width=30)
         self.search.pack(pady=10)
     # Call register class and run
     def open_register(self):
         register_gui = register_info()
         register_gui()
+    # Call search class and run
+    def open_search_engine(Self):
+        search_gui = search_info()
+        search_gui()        
     # Create a mainloop
     def run(self):
         self.gui.mainloop()
