@@ -17,5 +17,8 @@ class main_menu:
         # Add button
         register_button = tkinter.Button(self.gui, text="Register", width=30)
         register_button.pack(pady=10)
-# Call class and run
+    # Call register class and run
+    def open_register(self):
+        register_gui = register_info()
+        register_gui()
 # Run the Menu Class
