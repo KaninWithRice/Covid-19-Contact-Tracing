@@ -2,6 +2,8 @@
 # Import tkinter
 import tkinter
 from tkinter import ttk
+# Import Csv for data recording
+import csv
 # Create a Class
 class register_info:
     def __init__(self):
@@ -117,6 +119,9 @@ class register_info:
         # Add a button
         self.reg_button = tkinter.Button(self.pad2, text="Register Information")
         self.reg_button.grid(row=13, column=2, padx=20, pady=20)
-        
+    # Mainloop Function
     def mainloop(self):
         self.gui.mainloop()
+    # Create a Register function
+   
+    
