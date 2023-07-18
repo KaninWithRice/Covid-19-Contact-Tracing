@@ -123,5 +123,24 @@ class register_info:
     def mainloop(self):
         self.gui.mainloop()
     # Create a Register function
+    def register_entry(self):
+        first_name = self.fname_entry.get()
+        middle_name =self.mname_entry.get()
+        last_name = self.lname_entry.get()
+        suffix = self.suffix_entry.get()
+        housenum = self.housenum_entry.get()
+        street = self.street_entry.get()
+        bgry = self.brgy_entry.get()
+        city = self.city_entry.get()
+        age = self.age_entry.get()
+        contactnum = self.contactnum_entry.get()
+        gender = self.gender_entry.get()
+        vstatus = self.vstatus_entry.get()
+        vtype = self.vtype_entry.get()
+        symptoms = self.symptoms_entry.get()
+        contact_symp = self.contact_symp_entry.get()
+        tested = self.tested_entry.get()
+        travel = self.travel_entry.get()
+
    
     
