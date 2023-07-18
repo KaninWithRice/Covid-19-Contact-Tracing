@@ -14,6 +14,8 @@ class main_menu:
         # Add Label
         title_label = tkinter.Label(self.gui, text="The Solution \n Let's End Covid As One!!", font=("Calibri", 14))
         title_label.pack(pady=20)               
-# Add button
+        # Add button
+        register_button = tkinter.Button(self.gui, text="Register", width=30)
+        register_button.pack(pady=10)
 # Call class and run
 # Run the Menu Class
