@@ -137,14 +137,8 @@ class search_info:
         age = self.age_entry.get()
         contactnum = self.contactnum_entry.get()
         gender = self.gender_entry.get()
-        vstatus = self.vstatus_entry.get()
-        vtype = self.vtype_entry.get()
-        symptoms = self.symptoms_entry.get()
-        contact_symp = self.contact_symp_entry.get()
-        tested = self.tested_entry.get()
-        travel = self.travel_entry.get()
         # Check if at least one field is filled
-        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
+        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not gender:
             messagebox.showerror("ERROR << PLEASE ENTER ATLEAST ONE INFORMATION >> ERROR")    # Add Error Input
             return
         
@@ -153,5 +147,33 @@ class search_info:
         with open("user_data.csv", "r") as file:
             reader = csv.reader(file)
             header = next(reader)  # Get the header row
-# Allow user to search from any Personal Information
+        # Allow user to search from any Personal Information
+            for row in reader:
+                match = True
+
+                # Check each search criteria against the corresponding field
+                if first_name and row[0] != first_name:
+                    match = False
+                if middle_name and row[1] != middle_name:
+                    match = False
+                if last_name and row[2] != last_name:
+                    match = False
+                if suffix and row[3] != suffix:
+                    match = False
+                if housenum and row[4] != housenum:
+                    match = False
+                if street and row[5] != street:
+                    match = False
+                if bgry and row[6] != bgry:
+                    match = False
+                if city and row[7] != city:
+                    match = False
+                if age and row[8] != age:
+                    match = False
+                if contactnum and row[9] != contactnum:
+                    match = False
+                if gender and row[10] != gender:
+                    match = False                  
+                if match:
+                    data_found.append(row)
 # Show result
