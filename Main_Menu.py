@@ -4,6 +4,7 @@ import tkinter
 from tkinter import messagebox
 # import class
 from Register_Info_Class import register_info
+from Search_Engine_Class import search_info
 # Create a Class for Main Menu
 class main_menu:
     def __init__(self):
@@ -14,9 +15,12 @@ class main_menu:
         # Add Label
         title_label = tkinter.Label(self.gui, text="The Solution \n Let's End Covid As One!!", font=("Calibri", 14))
         title_label.pack(pady=20)               
-        # Add button
+        # Add Register Option Button
         register_button = tkinter.Button(self.gui, text="Register",command=self.open_register, width=30)
         register_button.pack(pady=10)
+        # Add Search Option Button
+        self.search = tkinter.Button(self.gui, text="Search",width=30)
+        self.search.pack(pady=10)
     # Call register class and run
     def open_register(self):
         register_gui = register_info()
