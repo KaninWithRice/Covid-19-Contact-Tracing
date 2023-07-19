@@ -89,7 +89,32 @@ class search_info:
     # Search Function
     def search_engine(self):
     # Create an Object for the variables
+        search_value = None
     # Determine the search value
+        if self.fname_entry.get():
+            search_value = self.fname_entry.get().lower()
+        elif self.mname_entry.get():
+            search_value = self.mname_entry.get().lower()
+        elif self.lname_entry.get():
+            search_value = self.lname_entry.get().lower()
+        elif self.suffix_entry.get():
+            search_value = self.suffix_entry.get().lower()
+        elif self.housenum_entry.get():
+            search_value = self.housenum_entry.get().lower()
+        elif self.street_entry.get():
+            search_value = self.street_entry.get().lower()
+        elif self.brgy_entry.get():
+            search_value = self.brgy_entry.get().lower()
+        elif self.city_entry.get():
+            search_value = self.city_entry.get().lower()
+        elif self.age_entry.get():
+            search_value = self.age_entry.get()
+        elif self.contactnum_entry.get():
+            search_value = self.contactnum_entry.get().lower()
+        elif self.email_entry.get():
+            search_value = self.email_entry.get().lower()
+        elif self.gender_entry.get():
+            search_value = self.gender_entry.get().lower()
     # Check if search value is entered
     # Create a Temp Storage
     # Read csv file
