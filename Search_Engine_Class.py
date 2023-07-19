@@ -139,7 +139,7 @@ class search_info:
         if data_found:
             results = "\n".join(
                 [
-                    f"\n Name: {entry[0]} {entry[1]} {entry[2]} {entry[3]} \n Age: {entry[8]} \n Gender: {entry[11]} \n Address: {entry[4]} {entry[5]} {entry[6]} {entry[7]}, \n Email: {entry[10]}"
+                    f"\n Name: {entry[0]} {entry[1]} {entry[2]} {entry[3]} \n Age: {entry[8]} \n Gender: {entry[11]} \n Address: {entry[4]} {entry[5]} {entry[6]} {entry[7]} \n Email: {entry[10]} \n Contact No.: {entry[9]}"
                     for entry in data_found
                 ]
             )
