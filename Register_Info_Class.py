@@ -145,7 +145,7 @@ class register_info:
         travel = self.travel_entry.get()
         # Add Error Input
         if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not email or not gender or not vstatus or not vtype or not symptoms or not contact_symp or not tested or not travel:
-            messagebox.showerror("ERROR << PLEASE FILL UP ALL INFORMATION >> ERROR")    
+            messagebox.showerror("Error: Please Fill All Entry")    
             return
         # Create Data Label and Entry Variable
         label = ["First Name", "Middle Name", "Last Name", "Suffix", "House Number", "Street", "Baranggay/Village", "City", "Age", "Contact No.", "Gender", "Vaccine Status", "Type of Vaccine", "Question 1", "Question 2", "Question 3", "Question 4"]
