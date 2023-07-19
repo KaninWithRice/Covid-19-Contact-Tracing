@@ -160,7 +160,7 @@ class register_info:
         except FileNotFoundError:
             pass
         # Write info to the csv file
-        with open("user_data.csv", "a", newline="") as List:
+        with open("Data_List.csv", "a", newline="") as List:
             write = csv.writer(List)
             if not file_checker:
                 write.writerow(label)  # Write label 
