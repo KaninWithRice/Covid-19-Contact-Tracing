@@ -153,7 +153,7 @@ class register_info:
         # Check if a csv file exists
         file_checker = False
         try:
-            with open("user_data.csv", "r") as List:
+            with open("Data_List.csv", "r") as List:
                 read = csv.reader(List)
                 if any(read):
                     file_checker = True
@@ -165,3 +165,7 @@ class register_info:
             if not file_checker:
                 write.writerow(label)  # Write label 
             write.writerow(regd_data)  # Write current entry data
+        # Show success message
+        messagebox.showinfo("Data Registered", "Data Registered Successfully")
+        # Close the window
+        self.gui.destroy()

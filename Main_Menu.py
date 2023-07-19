@@ -13,7 +13,7 @@ class main_menu:
         self.gui.title ("Covid-19 Contact Tracing")
         self.gui.geometry ("600x400")
         # Add Label
-        title_label = tkinter.Label(self.gui, text="The Solution \n Let's End Covid As One!!", font=("Calibri", 14))
+        title_label = tkinter.Label(self.gui, text="THE SOLUTION \n Let's End Covid As One", font=("Calibri", 14))
         title_label.pack(pady=20)               
         # Add Register Option Button
         register_button = tkinter.Button(self.gui, text="Register",command=self.open_register, width=30)
