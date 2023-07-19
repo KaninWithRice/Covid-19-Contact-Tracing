@@ -153,7 +153,7 @@ class register_info:
         # Check if a csv file exists
         file_checker = False
         try:
-            with open("Data_List.csv", "r") as List:
+            with open("user_data.csv", "r") as List:
                 read = csv.reader(List)
                 if any(read):
                     file_checker = True
