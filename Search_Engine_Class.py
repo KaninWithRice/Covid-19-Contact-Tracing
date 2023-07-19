@@ -120,7 +120,20 @@ class search_info:
             messagebox.showerror("ERROR: Please Enter a Registered Data")
             return
     # Create a Temp Storage
+        data_found = []
     # Read csv file
+        with open("Data_List.csv", "r") as file:
+            reader = csv.reader(file)
+            header = next(reader)   # Locate Headers in row
+
+            for row in reader:
+                match = False
     # Check each criteria 
+                for field in row:
+                    if search_value in field.lower():
+                        match = True
+                        break
+                if match:
+                    data_found.append(row)
     # Show Result
     # Add message box if entry not found or found
