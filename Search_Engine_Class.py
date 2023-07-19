@@ -147,3 +147,4 @@ class search_info:
             messagebox.showinfo("SEARCH RESULT: ", f"Found {len(data_found)} Data that matched your Search:\n\n{results}")
         else:
             messagebox.showinfo("SEARCH RESULT: ", "No Data Entries Found")
+# Done

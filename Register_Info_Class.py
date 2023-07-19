@@ -169,3 +169,4 @@ class register_info:
         messagebox.showinfo("Data Registered", "Data Registered Successfully")
         # Close the window
         self.gui.destroy()
+# Done
