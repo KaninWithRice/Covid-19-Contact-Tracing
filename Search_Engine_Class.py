@@ -136,4 +136,14 @@ class search_info:
                 if match:
                     data_found.append(row)
     # Show Result
-    # Add message box if entry not found or found
+        if data_found:
+            results = "\n".join(
+                [
+                    f"\n Name: {entry[0]} {entry[1]} {entry[2]} {entry[3]} \n Age: {entry[8]} \n Gender: {entry[11]} \n Address: {entry[4]} {entry[5]} {entry[6]} {entry[7]}, \n Email: {entry[10]}"
+                    for entry in data_found
+                ]
+            )
+    # Add message box if entry not found or found    
+            messagebox.showinfo("SEARCH RESULT: ", f"Found {len(data_found)} Data that matched your Search:\n\n{results}")
+        else:
+            messagebox.showinfo("SEARCH RESULT: ", "No Data Entries Found")
