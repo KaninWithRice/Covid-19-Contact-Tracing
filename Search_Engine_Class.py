@@ -116,6 +116,9 @@ class search_info:
         elif self.gender_entry.get():
             search_value = self.gender_entry.get().lower()
     # Check if search value is entered
+        if not search_value:
+            messagebox.showerror("ERROR: Please Enter a Registered Data")
+            return
     # Create a Temp Storage
     # Read csv file
     # Check each criteria 
