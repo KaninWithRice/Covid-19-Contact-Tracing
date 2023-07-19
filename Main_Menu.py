@@ -24,11 +24,11 @@ class main_menu:
     # Call register class and run
     def open_register(self):
         register_gui = register_info()
-        register_gui()
+        register_gui.mainloop()
     # Call search class and run
     def open_search_engine(Self):
         search_gui = search_info()
-        search_gui()        
+        search_gui.mainloop()        
     # Create a mainloop
     def run(self):
         self.gui.mainloop()

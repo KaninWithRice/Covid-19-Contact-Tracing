@@ -78,44 +78,6 @@ class search_info:
         self.gender_entry.grid(row=6, column=3)
         gender_label = tkinter.Label(self.pad1_lable, text="Gender")
         gender_label.grid (row=5, column=3)
-
-
-        # Create a pack widgets
-        self.pad2 = tkinter.Frame(self.gui)
-        self.pad2.pack()
-        self.pad2_lable = tkinter.LabelFrame(self.pad2, text="Vaccination Details")
-        self.pad2_lable.grid (row=7, column=2)
-        # Add Entries and Labels For pad2
-        # Vaccine Status Entry and Label
-        self.vstatus_entry = ttk.Combobox(self.pad2_lable, values=["None", "1st Dose", "2nd Dose", "1st Booster", "2nd Booster"])
-        self.vstatus_entry.grid(row=9, column=0)
-        vstatus_label = tkinter.Label(self.pad2_lable, text="Vaccination Status")
-        vstatus_label.grid (row=8, column=0)
-        # Vaccine Type Entry and Label
-        self.vtype_entry = ttk.Combobox(self.pad2_lable, values=["None", "Pfizer", "Johnson & Johnson", "AstraZeneca", "Moderna", "Sinovac", "Sputnik"])
-        self.vtype_entry.grid(row=9, column=1)
-        vtype_label = tkinter.Label(self.pad2_lable, text="Type of Vaccine")
-        vtype_label.grid (row=8, column=1)
-        # Symptoms Entry and Label
-        self.symptoms_entry = ttk.Combobox(self.pad2_lable, values=["Fever", "Cough", "Loss of Smell", "Loss of Taste", "Body Pain", "None of the above"])
-        self.symptoms_entry.grid(row=9, column=2)
-        symptoms_label = tkinter.Label(self.pad2_lable, text="Symptoms in the past 7 Days")
-        symptoms_label.grid (row=8, column=2)
-        # Contact with Symptoms Entry and Label
-        self.contact_symp_entry = ttk.Combobox(self.pad2_lable, values=["Yes", "No"])
-        self.contact_symp_entry.grid(row=11, column=0)
-        contact_symp_label = tkinter.Label(self.pad2_lable, text="Do you had contact with \n someone with the Symptoms?")
-        contact_symp_label.grid (row=10, column=0)
-        # Tested for Covid Entry and Label
-        self.tested_entry = ttk.Combobox(self.pad2_lable, values=["Yes-Positive", "Yes-Negative", "No"])
-        self.tested_entry.grid(row=11, column=1)
-        tested_label = tkinter.Label(self.pad2_lable, text="Have you been tested for \n Covid-19 for the past 10 days?")
-        tested_label.grid (row=10, column=1)
-        # Travel Concern Entry and Label
-        self.travel_entry = ttk.Combobox(self.pad2_lable, values=["Yes", "No"])
-        self.travel_entry.grid(row=11, column=2)
-        travel_label = tkinter.Label(self.pad2_lable, text="Have you Traveled International \n  for the past 14 days?")
-        travel_label.grid (row=10, column=2)
         # Add a Search Button
         self.search = tkinter.Button(self.pad2, text="Search", command=self.search_engine)
         self.search.grid(row=13, column=2, padx=20, pady=20)
@@ -140,7 +102,7 @@ class search_info:
         gender = self.gender_entry.get()
         # Check if at least one field is filled
         if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not email or not gender:
-            messagebox.showerror("ERROR << PLEASE ENTER ATLEAST ONE INFORMATION >> ERROR")    # Add Error Input
+            messagebox.showerror("ERROR: PLEASE ENTER ATLEAST ONE INFORMATION")    # Add Error Input
             return
         
         data_found = []     #Added object for data entries found
