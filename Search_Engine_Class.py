@@ -101,8 +101,8 @@ class search_info:
         email = self.email_entry.get()
         gender = self.gender_entry.get()
         # Check if at least one field is filled
-        if not first_name or not middle_name or not last_name or not suffix or not housenum or not street or not bgry or not city or not age or not contactnum or not email or not gender:
-            messagebox.showerror("ERROR << PLEASE ENTER ATLEAST ONE INFORMATION >> ERROR")    # Add Error Input
+        if not any([first_name, middle_name, last_name, suffix, housenum, street, bgry, city, age, contactnum, email, gender]):
+            messagebox.showerror("ERROR: PLEASE ENTER AT LEAST ONE INFORMATION")# Add Error Input 
             return
         
         data_found = []     #Added object for data entries found
